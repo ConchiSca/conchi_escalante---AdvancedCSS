@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: #c3cfe2;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0%;
+}
+
+header {
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Level 1 */
+
+.card {
+    width: 300px;
+    height: 370px;
+    border-radius: 14px;
+    margin-left: 15px;
+    box-shadow: 5px 5px 6px darkgray;
+    background-color: #fff;
+    
+
+    &__text {
+        color: grey;
+        text-align: start;
+        line-height: 25px;
+        padding: 30px;
+        padding-bottom: 50px;
+        margin-bottom: 0;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+    }
+
+    &__footer {
+        background-color: #686de0;
+        margin-top: 0;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        
+    }
+
+    &__name {
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+
+    &__subtitle {
+        color: #abaee8;
+        text-align: center;
+        font-size: 15px;
+        padding-bottom: 30px;
+        letter-spacing: .5px;
+    }
+
+    &__img {
+        position: absolute;
+        left: 128px;
+        top: 365px;
+        width: 80px;
+        height: 80px;
+        border: solid;
+        border-color: #fff;
+        border-radius: 100% 100% 100% 100%;
+        margin: 0;
+        z-index: +1;
+    }
+    
+}
+
+.card__img {
+
+    @media screen and (min-width: 386px ) { 
+        position: absolute;
+        left: 120px;
+        top: 332px;
+    }
+
+}
+
+
+/* Level 2 */
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-template-rows: 370px;
+    justify-content: center;
+    justify-items: stretch;
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-bottom: 50px;
+    row-gap: 20px;
+
+    @media screen and (min-width: 620px) {
+        display: grid ;
+        grid-template: repeat(7, 370px) / repeat(auto-fill, minmax(300px,auto));
+        justify-content: center;
+        justify-items: stretch;
+        margin-top: 50px;
+        margin-left: 5px;
+        column-gap: 25px;
+        row-gap: 20px;
+
+    }
+
+    @media screen and (min-width: 830px) {
+        display: grid ;
+        grid-template: repeat(7, 370px) / repeat(3, 300px);
+        justify-content: center;
+        justify-items: stretch;
+        margin-top: 50px;
+        margin-left: 50px;
+        column-gap: 35px;
+        row-gap: 20px;
+
+    }
+}
+
+.portfolio-card {
+    position: relative;
+    width: 300px;
+    height: 370px;
+    border-radius: 14px 14px 14px;
+    box-shadow: 5px 5px 6px darkgray;
+    background-color: #fff;
+    z-index: 0;
+    
+
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 14px;
+        box-shadow: 5px 5px 6px darkgray;
+        transition-duration: 380ms;
+        transition-property: opacity;
+        transition-timing-function: ease-in;
+        
+    }
+    
+    &__button {
+        position: absolute;
+        top: 45%;
+        left: 28%;
+        width: 140px;
+        height: 40px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        color: white;
+        background-color: rgb(90, 85, 73);
+        border: none;
+        border-radius: 5px;
+        z-index: -1;
+    } 
+
+    &__img:hover {
+        opacity: 0;   
+    }     
+    
+    &__button:hover {
+        z-index: 2;
+    }
+
+}
+
+/* Level 3 */
+
+.social-nav {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: +1;
+
+}
+
+.social-nav__menu {
+    padding: 0px;
+    transform: translate(165px,0);
+    list-style: none;
+}
+
+.social-nav__menu li {
+    display: block;
+    margin: 5px;
+    width: 200px;
+    padding: 10px;
+    margin: 0px;
+    transition: all .5s;
+    text-align: left;
+}
+
+
+.social-nav__menu li a {
+    color: white;
+    font-size: 15px;
+}
+
+.social-nav__menu li:hover {
+    transform: translate(-165px,0);
+    transition: all .5s;
+}
+
+.social-nav__menu li i {
+    margin-right: 10px;
+    color: white;
+    padding: 10px 15px 10px 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.social-nav__menu-button1 {
+    background-color: #e17b77;
+}
+
+.social-nav__menu-button2 {
+    background-color:#00aced;
+}
+
+.social-nav__menu-button3 {
+    background-color: #3b5998;
+}
+
+.social-nav__menu-button4 {
+    background-color: #007bb6;
+}
+
+.social-nav__menu-button5 {
+    background-color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
